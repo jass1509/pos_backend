@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from django.conf.urls.static import static
+from django.conf.urls.static import static  
 
 from inventory.views import CategoryViewSet, ProductViewSet
 from django.conf import settings
