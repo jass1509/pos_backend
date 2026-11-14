@@ -11,7 +11,11 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-insecure-key")
 DEBUG = os.getenv("DJANGO_DEBUG", "1") == "1"
 #ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['pos-backend-rho-two.vercel.app','vercel.app', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = [
+    'https://pos-backend-rho-two.vercel.app',
+    'https://*.vercel.app',
+]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
